@@ -1,11 +1,20 @@
 const DATABASE_KEYS = Object.freeze({
-    SERVICES: "services"
+    SERVICES: "services",
+    SKILLS: "skills",
+    EXPERIENCES: "experiences",
+    MESSAGES: "messages",
+    PORTFOLIO: "portfolio",
 })
 
 const OPERATION_MESSAGES = Object.freeze({
     ADDED: "Data Successfully Added",
     UPDATE: "Data Successfully Updated",
     DELETE: "Data Successfully Deleted",
+})
+
+const COMMON_VALIDATION_MESSAGES = Object.freeze({
+    notNull: (field) => `${field} cannot be null`,
+    length: (field, min, max) => `${field} must be between ${min} and ${max} chars`
 })
 
 const CONTENT_TYPES = Object.freeze({
@@ -23,5 +32,6 @@ const CONTENT_TYPES = Object.freeze({
 module.exports = {
     DATABASE_KEYS,
     OPERATION_MESSAGES,
-    CONTENT_TYPES
+    CONTENT_TYPES,
+    COMMON_VALIDATION_MESSAGES
 }

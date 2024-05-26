@@ -1,4 +1,3 @@
-const Service = require('../models/service')
 const { resultExecutionHelper } = require('../utils/common')
 const {ErrorResult, SuccessResult} = require('../utils/result')
 
