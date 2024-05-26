@@ -1,12 +1,17 @@
-const { COMMON_VALIDATION_MESSAGES } = require("../utils/constant")
+const { resultExecutionHelper } = require('../utils/common')
+const {ErrorResult, SuccessResult} = require('../utils/result')
 
-const BaseValidator = require = ('./baseValidation.js')
-
-class SkillValidator extends BaseValidator {
-    constructor(skill) {
-        super.addValidation(super.checkNotNull(skill.name, COMMON_VALIDATION_MESSAGES.notNull('Name')))
-        super.addValidation(super.checkLength(skill.name, 3, 20, COMMON_VALIDATION_MESSAGES.length('Name', 3, 20)))
-    }
+const validateSkill = (skill) => {
+    const validationResult = resultExecutionHelper(checkNameNull(skill))
+    return validationResult
 }
 
-module.exports = SkillValidator
+const checkNameNull = (skill) => {
+    if(skill.name === '') {
+        return new ErrorResult("Name cannot be empty")
+    }
+
+    return new SuccessResult()
+}
+
+module.exports = validateSkill

@@ -12,6 +12,7 @@ class Router {
         let splittedUrl = url
 
         if(this.isParamPath(url)) {
+            console.log(url, 'url');
             splittedUrl = this.getParamPath(url);
         }
 
