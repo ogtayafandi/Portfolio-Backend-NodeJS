@@ -13,6 +13,10 @@ const CREATE_MESSAGES = '/message'
 const DELETE_MESSAGE = '/message/delete/'
 const UPDATE_MESSAGE = '/message/'
 
+const GET_ALL_EXPERIENCES = '/experiences'
+const CREATE_EXPERIENCES = '/experience'
+const DELETE_EXPERIENCE = '/experience/delete/'
+const UPDATE_EXPERIENCE = '/experience/'
 
 module.exports = {
     GET_ALL_SERVICES,
@@ -26,5 +30,9 @@ module.exports = {
     GET_ALL_MESSAGES,
     CREATE_MESSAGES,
     DELETE_MESSAGE,
-    UPDATE_MESSAGE
+    UPDATE_MESSAGE,
+    GET_ALL_EXPERIENCES,
+    CREATE_EXPERIENCES,
+    DELETE_EXPERIENCE,
+    UPDATE_EXPERIENCE
 }
