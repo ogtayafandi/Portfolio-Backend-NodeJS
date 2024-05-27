@@ -2,7 +2,7 @@
   "services": [
     {
       "id": 5,
-      "name": "Test",
+      "name": "Kinderland",
       "description": "Description"
     },
     {
@@ -21,13 +21,7 @@
       "name": "Back-End Developer"
     }
   ],
-  "portfolios": [
-    {
-      "id": 1,
-      "name": "Kinderland",
-      "description": "Description"
-    }
-  ],
+  "portfolios": [],
   "experiences": [],
   "messages": [
     {
