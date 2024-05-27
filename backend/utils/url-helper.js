@@ -18,6 +18,11 @@ const CREATE_EXPERIENCES = '/experience'
 const DELETE_EXPERIENCE = '/experience/delete/'
 const UPDATE_EXPERIENCE = '/experience/'
 
+const GET_ALL_PORTFOLIOS = '/portfolios'
+const CREATE_PORTFOLIOS = '/portfolio'
+const DELETE_PORTFOLIO = '/portfolio/delete/'
+const UPDATE_PORTFOLIO = '/portfolio/'
+
 module.exports = {
     GET_ALL_SERVICES,
     CREATE_SERVICES,
@@ -34,5 +39,9 @@ module.exports = {
     GET_ALL_EXPERIENCES,
     CREATE_EXPERIENCES,
     DELETE_EXPERIENCE,
-    UPDATE_EXPERIENCE
+    UPDATE_EXPERIENCE,
+    GET_ALL_PORTFOLIOS,
+    CREATE_PORTFOLIOS,
+    DELETE_PORTFOLIO,
+    UPDATE_PORTFOLIO
 }

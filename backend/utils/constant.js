@@ -3,7 +3,7 @@ const DATABASE_KEYS = Object.freeze({
     SKILLS: "skills",
     EXPERIENCES: "experiences",
     MESSAGES: "messages",
-    PORTFOLIO: "portfolio",
+    PORTFOLIOS: "portfolios",
 })
 
 const OPERATION_MESSAGES = Object.freeze({

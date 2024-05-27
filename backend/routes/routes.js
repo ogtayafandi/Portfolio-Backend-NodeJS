@@ -15,11 +15,16 @@ const {
   CREATE_EXPERIENCES,
   DELETE_EXPERIENCE,
   UPDATE_EXPERIENCE,
+  GET_ALL_PORTFOLIOS,
+  CREATE_PORTFOLIOS,
+  DELETE_PORTFOLIO,
+  UPDATE_PORTFOLIO,
 } = require("../utils/url-helper");
 const serviceController = require("../controllers/service-controller");
 const skillController = require("../controllers/skill-controller");
 const messageController = require("../controllers/message-controller");
 const experienceController = require("../controllers/experience-controller");
+const portfolioController = require("../controllers/portfolio-controller");
 
 const Router = require("./router");
 
@@ -44,5 +49,10 @@ router.addRoute(GET_ALL_EXPERIENCES, experienceController.getExperiences);
 router.addRoute(CREATE_EXPERIENCES, experienceController.createExperience);
 router.addRoute(DELETE_EXPERIENCE, experienceController.deleteExperience, true);
 router.addRoute(UPDATE_EXPERIENCE, experienceController.updateExperience, true);
+
+router.addRoute(GET_ALL_PORTFOLIOS, portfolioController.getPortfolios);
+router.addRoute(CREATE_PORTFOLIOS, portfolioController.createPortfolio);
+router.addRoute(DELETE_PORTFOLIO, portfolioController.deletePortfolio, true);
+router.addRoute(UPDATE_PORTFOLIO, portfolioController.updatePortfolio, true);
 
 module.exports = router.handleRoute.bind(router);
