@@ -190,8 +190,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
-fetchAndProcessServices();
 fetchAndProcessSkills();
+fetchAndProcessServices();
 fetchAndProcessPortfolios();
 fetchAndProcessExperiences();
