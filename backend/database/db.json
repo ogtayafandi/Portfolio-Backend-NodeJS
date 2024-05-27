@@ -11,7 +11,16 @@
       "description": "Description 6"
     }
   ],
-  "skills": [],
+  "skills": [
+    {
+      "id": 1,
+      "name": "Front-End Developer"
+    },
+    {
+      "id": 2,
+      "name": "Back-End Developer"
+    }
+  ],
   "portfolio": [],
   "experiences": [],
   "messages": []
