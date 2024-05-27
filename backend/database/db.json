@@ -14,15 +14,41 @@
   "skills": [
     {
       "id": 1,
-      "name": "Front-End Developer"
+      "name": "Back-End Development",
+      "percent": 70
     },
     {
       "id": 2,
-      "name": "Back-End Developer"
+      "name": "Front-End Development",
+      "percent": 100
     }
   ],
-  "portfolios": [],
-  "experiences": [],
+  "portfolios": [
+    {
+      "id": 1,
+      "name": "Kinderland",
+      "description": "Kinderland",
+      "imageUrl": "https://kinderland.az/resize/center/pages/8/a6c91597-9866-4555-a501-68b5c3b24cea.png"
+    }
+  ],
+  "experiences": [
+    {
+      "id": 1,
+      "name": "Optima Gropu Co",
+      "startDate": "2022-01-06T00:00:00.000Z",
+      "endDate": "2023-07-15T00:00:00.000Z",
+      "imageUrl": "https://media.licdn.com/dms/image/C4D0BAQE_btxt6ExaHQ/company-logo_200_200/0/1637322464366/optima_sirketler_qrupu_logo?e=2147483647&v=beta&t=TXsQK8cA-Rk9pX1nfvZdR-yVlW8EQz08yKxGZAJyEzs",
+      "position": "Front-End Developer"
+    },
+    {
+      "id": 2,
+      "name": "Apertech ERP Solutions",
+      "startDate": "2022-07-15T00:00:00.000Z",
+      "endDate": null,
+      "imageUrl": "https://media.licdn.com/dms/image/C4D0BAQFv9j7jJNeMCg/company-logo_200_200/0/1631304961753?e=2147483647&v=beta&t=xvHkgjYFpUhNwzwZ0CKe8wKa__s5cPh7d79iffEVJ_A",
+      "position": "Front-End Developer"
+    }
+  ],
   "messages": [
     {
       "id": 1,
@@ -30,6 +56,48 @@
       "email": "oktayafandiev@gmail.com",
       "subject": "MERN-Stack Developer",
       "message": "Test Message for Messages API"
+    },
+    {
+      "id": 2,
+      "name": "Oktay Afandiev",
+      "email": "oktayafandiev@gmail.com",
+      "subject": "asd",
+      "message": "asd"
+    },
+    {
+      "id": 3,
+      "name": "Oktay Afandiev",
+      "email": "oktayafandiev@gmail.com",
+      "subject": "asdasd",
+      "message": "asdasd"
+    },
+    {
+      "id": 4,
+      "name": "Oktay Afandiev",
+      "email": "oktayafandiev@gmail.com",
+      "subject": "asd",
+      "message": "asd"
+    },
+    {
+      "id": 5,
+      "name": "asd",
+      "email": "oktayafandiev@gmail.com",
+      "subject": "asd",
+      "message": "asd"
+    },
+    {
+      "id": 6,
+      "name": "Oktay Afandiev",
+      "email": "oktayafandiev@gmail.com",
+      "subject": "Subject",
+      "message": "asdasdasd"
+    },
+    {
+      "id": 7,
+      "name": "Oktay Afandiev",
+      "email": "oktayafandiev@gmail.com",
+      "subject": "Subject",
+      "message": "asdasd"
     }
   ]
 }

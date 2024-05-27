@@ -2,7 +2,6 @@ const ResponseConfig = require('./responseConfig');
 const { Result, SuccessResult } = require('./result');
 
 const generateUniqueId = (datas) => {
-    console.log(datas, 'datas');
     if(datas.length === 0) return 1;
 
     const ids = datas.map(x => x.id)

@@ -1,16 +1,12 @@
 class Experience {
-    constructor({name, startDate, endDate, description, position}) {
+    constructor({name, startDate, endDate, imageUrl, position}) {
         this.name = name
-        this.description = description
         this.startDate = new Date(startDate)
         if (isNaN(this.startDate)) {
             throw new Error("Invalid startDate format. Expected format: YYYY-MM-DD")
         }
-
         this.endDate = new Date(endDate)
-        if (isNaN(this.endDate)) {
-            throw new Error("Invalid endDate format. Expected format: YYYY-MM-DD")
-        }
+        this.imageUrl = imageUrl
         this.position = position
     }
 }
