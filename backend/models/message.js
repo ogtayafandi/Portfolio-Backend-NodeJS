@@ -1,5 +1,5 @@
 class Message {
-    constructor({name, email}) {
+    constructor({name, email,subject, message}) {
         this.name = name
         this.email = email
         this.subject = subject

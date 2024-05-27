@@ -23,5 +23,13 @@
   ],
   "portfolio": [],
   "experiences": [],
-  "messages": []
+  "messages": [
+    {
+      "id": 1,
+      "name": "Ogtay Afandi",
+      "email": "oktayafandiev@gmail.com",
+      "subject": "MERN-Stack Developer",
+      "message": "Test Message for Messages API"
+    }
+  ]
 }
