@@ -19,21 +19,26 @@ const generateResponse = (config) => {
 }
 
 const parseRequestBody = async (req) => {
-    let body = ''
-    req.on('data', x => {
-        body += x.toString();
-    });
-    return new Promise((resolve, reject) => {
-        req.on('end', () => {
-            try {
-                const parsedBody = JSON.parse(body)
-                resolve(parsedBody)
-            } catch (error) {
-                reject(error)
-            }
+    if (req.method === 'POST' || req.method === 'PUT') {
+        let body = ''
+        req.on('data', x => {
+            body += x.toString();
+        });
+        return new Promise((resolve, reject) => {
+            req.on('end', () => {
+                try {
+                    const parsedBody = JSON.parse(body)
+                    resolve(parsedBody)
+                } catch (error) {
+                    reject(error)
+                }
+            })
         })
-    })
+    } else {
+        return null;
+    }
 }
+
 
 /**
  * 

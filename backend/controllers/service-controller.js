@@ -34,7 +34,39 @@ const createService = async (req, res) => {
       );
 }
 
+const deleteService = async (req, res, id) => {
+  const result = await serviceService.deleteService(id);
+
+  generateResponse(
+      new ResponseConfig(
+        result.success ? 200 : 400,
+        req,
+        res,
+        CONTENT_TYPES[".json"],
+        JSON.stringify(result)
+      )
+    );
+}
+
+const updateService = async (req, res, id) => {
+  const body = await parseRequestBody(req);
+  const service = { id, ...body };
+  const result = await serviceService.updateService(service);
+
+  generateResponse(
+      new ResponseConfig(
+        result.success ? 200 : 400,
+        req,
+        res,
+        CONTENT_TYPES[".json"],
+        JSON.stringify(result)
+      )
+    );
+}
+
 module.exports = {
     getServices, 
-    createService
+    createService,
+    deleteService,
+    updateService
 }

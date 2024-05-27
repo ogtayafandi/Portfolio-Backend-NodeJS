@@ -24,7 +24,33 @@ const addServices = async (service) => {
     return new SuccessResult(OPERATION_MESSAGES.ADDED, addedService)
 }
 
+const deleteService = async (id) => {
+    try {
+        await baseServices.deleteModelFromTable(DATABASE_KEYS.SERVICES, id);
+        return new SuccessResult(OPERATION_MESSAGES.DELETED, null);
+    } catch (error) {
+        return new ErrorResult(OPERATION_MESSAGES.ERROR, error.message);
+    }
+}
+
+/**
+ * 
+ * @param {Service} service 
+ * @returns 
+ */
+const updateService = async (service) => {
+    try {
+        const updatedService = await baseServices.updateModel(DATABASE_KEYS.SERVICES, service);
+        return new SuccessResult(OPERATION_MESSAGES.UPDATED, updatedService);
+    } catch (error) {
+        return new ErrorResult(OPERATION_MESSAGES.ERROR, error.message);
+    }
+}
+
+
 module.exports = {
     getServices,
-    addServices
+    addServices,
+    deleteService,
+    updateService
 }

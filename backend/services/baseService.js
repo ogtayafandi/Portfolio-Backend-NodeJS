@@ -29,13 +29,18 @@ const addModelToTable = async (tableKey, model) => {
 const deleteModelFromTable = async (tableKey, id) => {
     const data = await readAllJsonFromText();
     data[tableKey] = data[tableKey].filter((item) => item.id !== id)
-    await writeFileAsync(DB_PATH, data)
+    await writeFileAsync(DB_PATH, JSON.stringify(data, null, 2))
 }
 
 const updateModel = async (tableKey, model) => {
     const data = await readAllJsonFromText();
-    data[tableKey] = data[tableKey].filter((item) => item.id !== id)
-    data[tableKey].push(model)
+    const index = data[tableKey].findIndex(item => item.id === model.id);
+    if (index === -1) {
+        throw new Error(`Model with id ${model.id} not found`);
+    }
+    data[tableKey][index] = { ...data[tableKey][index], ...model };
+    await writeFileAsync(DB_PATH, JSON.stringify(data, null, 2));
+    return data[tableKey][index];
 }
 
 module.exports = {
