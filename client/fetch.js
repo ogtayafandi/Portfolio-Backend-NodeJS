@@ -142,9 +142,34 @@ async function fetchAndProcessExperiences() {
     data?.data?.map((item) => {
       const slideDiv = document.createElement("a");
       const imageElement = document.createElement("img");
+      const paragraph = document.createElement("h5");
+      const paragraphDate = document.createElement("p");
+
+      paragraph.style.marginTop = '10px';
 
       slideDiv.appendChild(imageElement);
-      imageElement.src = item.imageUrl
+      slideDiv.appendChild(paragraph);
+      slideDiv.appendChild(paragraphDate);
+
+      imageElement.src = item.imageUrl;
+      imageElement.style.width = '200px'
+      paragraph.innerText = item.position;
+
+      const startDate = new Date(item.startDate).toLocaleDateString('en-EN', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      });
+
+      const endDate = item.endDate
+        ? new Date(item.endDate).toLocaleDateString('en-EN', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })
+        : 'Present';
+
+      paragraphDate.innerText = `${startDate} - ${endDate}`;
 
       document.getElementById("experience-row").appendChild(slideDiv);
     });
@@ -152,6 +177,7 @@ async function fetchAndProcessExperiences() {
     console.error("Error:", error);
   }
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
   const form = document.getElementById("form-contact");
