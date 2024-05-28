@@ -178,7 +178,6 @@ async function fetchAndProcessExperiences() {
   }
 }
 
-
 document.addEventListener("DOMContentLoaded", function() {
   const form = document.getElementById("form-contact");
   const formStatus = document.querySelector(".form-contact-status");
@@ -216,6 +215,98 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+
+async function fetchAndProcessSettings() {
+  try {
+    const response = await fetch(`${env}/settings`);
+    const result = await response.json();
+    const data = result.data[0];
+
+      const socialLinks = {
+          linkedinLink: "fab fa-linkedin",
+          facebookLink: "fab fa-facebook",
+          twitterLink: "fab fa-twitter",
+          githubLink: "fab fa-github"
+      };
+
+      const counts = {
+        clientCount: "Clients",
+        experienceYear: "Experiences",
+        lisenceCount: "Lisences",
+        projectCount: "Projects"
+      }
+
+      for (const [key, iconClass] of Object.entries(socialLinks)) {
+          if (data[key]) {
+              const aElement = document.createElement("a");
+              aElement.href = data[key];
+              aElement.target = '_blank';
+
+              aElement.className = "mr-3";
+              const iElement = document.createElement("i");
+              iElement.className = iconClass;
+
+              aElement.appendChild(iElement);
+
+              document.getElementById("social-links").appendChild(aElement);
+          }
+      }
+
+      for (const [key, text] of Object.entries(counts)) {
+        if (data[key]) {
+          const divElement = document.createElement("div");
+          divElement.className = 'col-sm-6 col-md-3'
+
+          const divElement2 = document.createElement("div");
+          divElement2.className = "ts-promo-number text-center"
+
+          const figure = document.createElement("figure")
+          figure.className = 'odometer'
+          figure.innerHTML = 0
+          figure.setAttribute('data-odometer-final', data[key])
+      
+          const h5 = document.createElement("h5");
+          h5.innerHTML = text
+
+          divElement.appendChild(divElement2)
+          divElement2.appendChild(figure)
+          divElement2.appendChild(h5)
+
+          document.getElementById("statistic-row").appendChild(divElement);
+        }
+       }
+        const aboutP = document.createElement("p");
+        aboutP.innerText = data.aboutText
+
+        const hr = document.createElement("hr");
+        hr.className = 'ts-hr-light mb-5'
+
+        const skillsP = document.createElement("p");
+        skillsP.innerText = data.skillsText
+
+        const addressP = document.createElement("p");
+        addressP.innerText = data.addressText
+
+        const phoneP = document.createElement("p");
+        phoneP.innerText = data.phoneNumber
+
+        const emailP = document.createElement("p");
+        emailP.innerText = data.email
+
+        document.getElementById("about-div").appendChild(aboutP);
+        document.getElementById("about-div").appendChild(hr);
+        document.getElementById("skills-text-row").appendChild(skillsP);
+        document.getElementById("adress-div").appendChild(addressP);
+        document.getElementById("phone-div").appendChild(phoneP);
+        document.getElementById("email-div").appendChild(emailP);
+
+
+  } catch (error) {
+      console.error("Bir hata oluştu:", error);
+  }
+}
+
+fetchAndProcessSettings();
 fetchAndProcessSkills();
 fetchAndProcessServices();
 fetchAndProcessPortfolios();

@@ -43,22 +43,7 @@
             <div class="container position-relative h-100 ts-align__vertical">
                 <div class="row w-100">
                     <div class="col-md-8">
-                        <figure class="ts-social-icons mb-4">
-                            <a href="#" class="mr-3">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="#" class="mr-3">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="mr-3">
-                                <i class="fab fa-pinterest"></i>
-                            </a>
-                            <a href="#" class="mr-3">
-                                <i class="fab fa-slack"></i>
-                            </a>
-                            <a href="#" class="mr-3">
-                                <i class="fab fa-instagram"></i>
-                            </a>
+                        <figure class="ts-social-icons mb-4" id="social-links">
                         </figure>
 
                         <h1>I am Ogtay Afandi</h1>
@@ -102,38 +87,10 @@
                         <h2>About Me</h2>
                     </div>
                     <div class="row ts-align__vertical">
-                        <div class="col-md-12">
-                            <h4 class="ts-bubble-border">Hi There</h4>
-                            <p>
-                                In id nulla magna. Nullam posuere fermentum mattis. Nunc id dui at sapien faucibus fermentum
-                                ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta
-                                sem turpis quis leo. Nulla in feugiat elit.
-                            </p>
-                            <dl class="ts-column-count-2">
-                                <dt>Name:</dt>
-                                <dd>Jonathan Doe</dd>
-                                <dt>Phone:</dt>
-                                <dd>+1 908-736-1801</dd>
-                                <dt>Email:</dt>
-                                <dd>hello@example.com</dd>
-                                <dt>Twitter:</dt>
-                                <dd>freelancer9</dd>
-                            </dl>
-                            <hr class="ts-hr-light mb-5">
-                            <a href="#contact" class="ts-btn-effect mr-2">
-                                <span class="ts-visible btn btn-primary ts-btn-arrow">Contact Me</span>
-                                <span class="ts-hidden btn btn-primary ts-btn-arrow" data-bg-color="#d44729">Contact Me</span>
-                            </a>
-                            <a href="#contact" class="ts-btn-effect mr-2">
-                                <span class="ts-visible btn btn-outline-light">
-                                    <i class="fa fa-download small mr-2"></i>
-                                    Download CV
-                                </span>
-                                <span class="ts-hidden btn btn-light bg-white">
-                                    <i class="fa fa-download small mr-2"></i>
-                                    Download CV
-                                </span>
-                            </a>
+                        <div class="col-md-12" id="about-div">
+                            <div>
+                                <h4 class="ts-bubble-border">Hi There</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -158,18 +115,8 @@
                     </div>
                     <h4>Every Day is a  New Challenge</h4>
                     <div class="row">
-                        <div class="col-md-6">
-                            <p>
-                                In id nulla magna. Nullam posuere fermentum mattis. Nunc id dui at sapien faucibus fermentum
-                                ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta
-                                sem turpis quis leo. Nulla in feugiat elit.
-                            </p>
-                            <p>
-                                Phasellus accumsan scelerisque dolor, quis mattis justo bibendum non. Nulla sollicitudin
-                                turpis in enim elementum varius. Vestibulum ante ipsum primis in faucibus orci luctus
-                                et ultrices posuere cubilia Curae
-                            </p>
-                            <a href="#contact" class="btn btn-outline-light mb-5">Contact Me</a>
+                        <div class="col-md-6" id="skills-text-row">
+                          
                         </div>
                         <div class="col-md-6" id="skills-row">
                             
@@ -191,31 +138,8 @@
 
             <section class="ts-block" data-bg-image="assets/img/bg-man-sitting.jpg">
                 <div class="container ts-promo-numbers">
-                    <div class="row">
-                        <div class="col-sm-6 col-md-3">
-                            <div class="ts-promo-number text-center">
-                                <figure class="odometer" data-odometer-final="43">0</figure>
-                                <h5>Clients</h5>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="ts-promo-number text-center">
-                                <figure class="odometer" data-odometer-final="68">0</figure>
-                                <h5>Projects</h5>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="ts-promo-number text-center">
-                                <figure class="odometer" data-odometer-final="17">0</figure>
-                                <h5>Awards</h5>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="ts-promo-number text-center">
-                                <figure class="odometer" data-odometer-final="12">0</figure>
-                                <h5>Years Experience</h5>
-                            </div>
-                        </div>
+                    <div class="row" id="statistic-row">
+                        
                     </div>
                 </div>
             </section>
@@ -242,25 +166,22 @@
                         <div class="col-sm-6 col-md-4 mb-4" data-animate="ts-fadeInUp">
                             <img src="assets/img/icon-pin.png" class="mb-4" alt="">
                             <h5>Address</h5>
-                            <div class="ts-opacity__50">
-                                <figure class="mb-0">999 Carter Street</figure>
-                                <figure>Sailor Springs, IL 62434</figure>
+                            <div class="ts-opacity__50" id="adress-div">
+
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-4 mb-4" data-animate="ts-fadeInUp" data-delay=".1s">
                             <img src="assets/img/icon-phone-02.png" class="mb-4" alt="">
                             <h5>Phone</h5>
-                            <div class="ts-opacity__50">
-                                <figure class="mb-0">+1 618-689-9409</figure>
-                                <figure>+1 781-254-8437</figure>
+                            <div class="ts-opacity__50" id="phone-div">
+
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-4 mb-4" data-animate="ts-fadeInUp" data-delay=".2s">
                             <img src="assets/img/icon-envelope.png" class="mb-4" alt="">
                             <h5>Email</h5>
-                            <div class="ts-opacity__50">
-                                <figure class="mb-0">hello@example.com</figure>
-                                <figure>support@example.com</figure>
+                            <div class="ts-opacity__50" id="email-div">
+
                             </div>
                         </div>
                     </div>
@@ -345,7 +266,7 @@
 
             <div class="text-dark bg-white">
                 <div class="container py-3 position-relative">
-                    <small>© 2018 ThemeStarz, All Rights Reserved</small>
+                    <small>© Afandi, 2024</small>
                     <a href="#page-top" class="ts-circle__xs rounded-0 bg-dark position-absolute ts-right__0 ts-top__0 ts-push-up__50 ts-scroll">
                         <i class="fa fa-arrow-up text-white"></i>
                     </a>
