@@ -215,7 +215,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
 async function fetchAndProcessSettings() {
   try {
     const response = await fetch(`${env}/settings`);
