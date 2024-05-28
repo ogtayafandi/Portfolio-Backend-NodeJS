@@ -4,6 +4,7 @@ const DATABASE_KEYS = Object.freeze({
     EXPERIENCES: "experiences",
     MESSAGES: "messages",
     PORTFOLIOS: "portfolios",
+    SETTINGS: "settings"
 })
 
 const OPERATION_MESSAGES = Object.freeze({

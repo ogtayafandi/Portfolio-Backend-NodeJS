@@ -19,12 +19,17 @@ const {
   CREATE_PORTFOLIOS,
   DELETE_PORTFOLIO,
   UPDATE_PORTFOLIO,
+  GET_ALL_SETTINGS,
+  UPDATE_SETTING,
+  CREATE_SETTINGS,
+  DELETE_SETTING
 } = require("../utils/url-helper");
 const serviceController = require("../controllers/service-controller");
 const skillController = require("../controllers/skill-controller");
 const messageController = require("../controllers/message-controller");
 const experienceController = require("../controllers/experience-controller");
 const portfolioController = require("../controllers/portfolio-controller");
+const settingController = require("../controllers/setting-controller");
 
 const Router = require("./router");
 
@@ -54,5 +59,10 @@ router.addRoute(GET_ALL_PORTFOLIOS, portfolioController.getPortfolios);
 router.addRoute(CREATE_PORTFOLIOS, portfolioController.createPortfolio);
 router.addRoute(DELETE_PORTFOLIO, portfolioController.deletePortfolio, true);
 router.addRoute(UPDATE_PORTFOLIO, portfolioController.updatePortfolio, true);
+
+router.addRoute(GET_ALL_SETTINGS, settingController.getSettings);
+router.addRoute(CREATE_SETTINGS, settingController.createSetting);
+router.addRoute(DELETE_SETTING, settingController.deleteSetting, true);
+router.addRoute(UPDATE_SETTING, settingController.updateSetting, true);
 
 module.exports = router.handleRoute.bind(router);

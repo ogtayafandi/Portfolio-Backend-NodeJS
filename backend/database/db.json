@@ -121,5 +121,23 @@
       "subject": "Subject",
       "message": "Messages"
     }
+  ],
+  "settings": [
+    {
+      "id": 1,
+      "email": "oktayafandiev@gmail.com",
+      "facebookLink": "https://www.facebook.com/ogtayafandi/",
+      "linkedinLink": "https://www.linkedin.com/in/oktayafandi/",
+      "githubLink": "https://github.com/ogtayafandi",
+      "twitterLink": "https://x.com",
+      "aboutText": "Hello! I'm Ogtay, a passionate Front-End Developer based in Baku, Azerbaijan. With a career spanning since 2022, I thrive on the challenges of crafting user-friendly, visually appealing web sites and Ive been dedicated to crafting user-friendly web experiences, with a focus on ERP systems. Ive cultivated my skills through dedication and a relentless pursuit of improvement. Every day, I strive to push the boundaries of my knowledge, ensuring that I stay at the forefront of industry trends and technologies.",
+      "skillsText": "In id nulla magna. Nullam posuere fermentum mattis. Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo. Nulla in feugiat elit. Phasellus accumsan scelerisque dolor, quis mattis justo bibendum non. Nulla sollicitudin turpis in enim elementum varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae",
+      "clientCount": 10,
+      "projectCount": 12,
+      "lisenceCount": 3,
+      "experienceYear": 2,
+      "phoneNumber": "+994 55 303 91 91",
+      "addressText": "Azerbaijan, Baku, Ahmad Rajabli 16"
+    }
   ]
 }

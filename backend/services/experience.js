@@ -14,7 +14,6 @@ const getExperiences = async () => {
  * @returns 
  */
 const addExperiences = async (experience) => {
-    
     const addedExperience = await baseServices.addModelToTable(DATABASE_KEYS.EXPERIENCES, experience)
     return new SuccessResult(OPERATION_MESSAGES.ADDED, addedExperience)
 }
