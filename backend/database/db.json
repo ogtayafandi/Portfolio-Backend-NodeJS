@@ -1,18 +1,8 @@
 {
   "services": [
     {
-      "id": 6,
-      "name": "UI/UX Design",
-      "description": "Description"
-    },
-    {
       "id": 7,
       "name": "Front-End Development",
-      "description": "Description"
-    },
-    {
-      "id": 8,
-      "name": "Back-End Development",
       "description": "Description"
     }
   ],

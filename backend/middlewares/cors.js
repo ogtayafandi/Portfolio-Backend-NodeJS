@@ -2,7 +2,7 @@ function useCors(req, res, next) {
   if (req.method === "OPTIONS") {
     const headers = {
       "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT",
+      "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE",
       "Access-Control-Allow-Headers": "Content-Type",
     };
     res.writeHead(204, headers);
