@@ -301,7 +301,7 @@ async function fetchAndProcessSettings() {
 
 
   } catch (error) {
-      console.error("Bir hata oluştu:", error);
+      console.error("Error:", error);
   }
 }
 
